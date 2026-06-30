@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: shortlinkx
+  profiles:
+    active: dev
+  cache:
+    type: redis
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: alpha
+    tagsSorter: alpha
+  api-docs:
+    path: /v3/api-docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
